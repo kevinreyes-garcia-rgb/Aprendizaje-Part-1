@@ -9,3 +9,11 @@
 | ✨ Rol | 👤 Desarrollador |
 | :--- | :--- |
 | **Lead Dev** | [Klee](https://github.com/kevinreyes-garcia-rgb/) |
+
+## 🛠️ Instalación y Uso
+
+Si quieres probar y leer mi Guia , sigue estos pasos:
+
+1. **Clonar el repositorio:**
+   ```bash
+   https://kevinreyes-garcia-rgb.github.io/Aqua-Bot/
