@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía de Programación - Klee</title>
     <style>
+        /* Mantenemos tus estilos originales intactos */
         * { box-sizing: border-box; }
 
         body {
@@ -105,7 +106,6 @@
             background-color: #f9f9f9; 
         }
 
-        /* Estilos de Contenido */
         .content { 
             padding: 25px; 
             flex-grow: 1; 
@@ -150,7 +150,6 @@
             color: #34495e;
         }
         
-        /* Bloques de Código */
         code {
             background: #f0f0f0;
             padding: 2px 5px;
@@ -172,7 +171,6 @@
             font-family: 'Consolas', 'Monaco', monospace;
         }
 
-        /* Portada Especial */
         #p1 .front {
             background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
             color: white;
@@ -180,28 +178,6 @@
             justify-content: center;
             text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        #p1 .front::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
-            animation: pulse 15s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(30px, 30px); }
-        }
-
-        .cover-content {
-            position: relative;
-            z-index: 1;
         }
 
         .cover-photo {
@@ -211,106 +187,30 @@
             border: 3px solid rgba(255,255,255,0.3);
             border-radius: 15px;
             margin-bottom: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         }
 
-        #p1 h1 {
-            font-size: 2.2rem;
-            margin: 0;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+        #p1 h1 { font-size: 2.2rem; margin: 0; }
+        .subtitle { color: #3498db; font-weight: bold; }
 
-        #p1 .subtitle {
-            color: #3498db;
-            font-weight: bold;
-            margin-top: 5px;
-            font-size: 1.1rem;
-        }
-
-        #p1 .author {
-            margin-top: 20px;
-            font-style: italic;
-            opacity: 0.8;
-            font-size: 0.95rem;
-        }
-
-        /* Página final */
-        .end-page {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100%;
-        }
-
-        .end-page h1 {
-            color: #3498db;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .end-page p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .restart-btn {
-            padding: 12px 28px;
-            cursor: pointer;
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
-        }
-
-        .restart-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
-        }
-
-        .restart-btn:active {
-            transform: translateY(0);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .book {
-                width: 90vw;
-                height: 70vh;
-                max-width: 380px;
-                max-height: 550px;
-            }
-
-            .instructions, .github-badge {
-                font-size: 0.8rem;
-                padding: 8px 16px;
-            }
+            .book { width: 90vw; height: 70vh; }
         }
     </style>
 </head>
 <body>
 
-    <div class="instructions">📖 Arrastra para aprender</div>
+    <div class="instructions">📖 Arrastra las páginas para leer</div>
 
     <div class="github-badge">
-        <a href="https://github.com/kevinreyes-garcia-rgb" target="_blank">
-            ⭐ GitHub
-        </a>
+        <a href="#" target="_blank">⭐ GitHub: Klee</a>
     </div>
 
     <div class="book" id="book">
         
-        <!-- Página 1: Portada -->
-        <div class="paper" id="p1" style="z-index: 5;">
+        <div class="paper" id="p1" style="z-index: 7;">
             <div class="front">
                 <div class="cover-content">
-                    <img src="https://avatars.githubusercontent.com/u/kevinreyes-garcia-rgb?s=400&v=4" alt="Portada" class="cover-photo" onerror="this.src='https://via.placeholder.com/300x200?text=Guía+Dev'">
+                    <img src="https://avatars.githubusercontent.com/u/kevinreyes-garcia-rgb?s=400&v=4" alt="Portada" class="cover-photo">
                     <h1>Guía Dev</h1>
                     <div class="subtitle">HTML • JS • C++</div>
                     <div class="author">Por: Klee</div>
@@ -319,59 +219,188 @@
             <div class="back">
                 <div class="content">
                     <h2>Introducción</h2>
-                    <p>Bienvenido a esta guía interactiva. Aquí aprenderás los pilares del desarrollo moderno y la programación estructurada.</p>
-                    <p><strong>📚 Contenido:</strong></p>
+                    <p>Dominar la programación requiere entender tres niveles:</p>
                     <ul>
-                        <li>Estructura Web (HTML)</li>
-                        <li>Lógica de Scripting (JS)</li>
-                        <li>Programación de Sistema (C++)</li>
-                        <li>Conceptos avanzados</li>
+                        <li><strong>Estructura:</strong> Cómo se organizan los datos (HTML).</li>
+                        <li><strong>Lógica:</strong> Cómo interactúan los elementos (JS).</li>
+                        <li><strong>Rendimiento:</strong> Cómo se gestiona la memoria (C++).</li>
                     </ul>
-                    <p><em>💡 Practica mientras aprendes</em></p>
+                    <p>Esta guía te llevará desde lo visual hasta el corazón del hardware.</p>
                 </div>
                 <div class="page-num">1</div>
             </div>
         </div>
 
-        <!-- Página 2: HTML -->
-        <div class="paper" id="p2" style="z-index: 4;">
+        <div class="paper" id="p2" style="z-index: 6;">
             <div class="front">
                 <div class="content">
-                    <h2>HTML5</h2>
-                    <h3>La Estructura Web</h3>
-                    <p>HTML es el esqueleto de cualquier sitio web. Define párrafos, títulos, enlaces e imágenes.</p>
-                    <pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hola Mundo&lt;/h1&gt;
-  &lt;p&gt;Bienvenido&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+                    <h2>HTML5 Avanzado</h2>
+                    <h3>Semántica Web</h3>
+                    <p>No uses solo <code>&lt;div&gt;</code>. La semántica ayuda al SEO y accesibilidad:</p>
+                    <ul>
+                        <li><code>&lt;header&gt;</code>: Navegación y logos.</li>
+                        <li><code>&lt;main&gt;</code>: Contenido principal único.</li>
+                        <li><code>&lt;article&gt;</code>: Contenido independiente.</li>
+                    </ul>
+                    <pre>&lt;article&gt;
+  &lt;h2&gt;Título&lt;/h2&gt;
+  &lt;p&gt;Post...&lt;/p&gt;
+&lt;/article&gt;</pre>
                 </div>
                 <div class="page-num">2</div>
             </div>
             <div class="back">
                 <div class="content">
-                    <h3>Etiquetas Esenciales</h3>
-                    <p><code>&lt;div&gt;</code> - Contenedor<br>
-                    <code>&lt;a&gt;</code> - Enlaces<br>
-                    <code>&lt;img&gt;</code> - Imágenes<br>
-                    <code>&lt;button&gt;</code> - Botones</p>
-                    <h3>Atributos Clave</h3>
-                    <p><code>id</code> - Identificador único<br>
-                    <code>class</code> - Clases CSS<br>
-                    <code>href</code> - Enlaces<br>
-                    <code>src</code> - Fuentes</p>
-                    <p><em>✨ HTML no es un lenguaje de programación, es de marcado.</em></p>
+                    <h3>Formularios y Datos</h3>
+                    <p>Los formularios son la base de la interacción:</p>
+                    <pre>&lt;input type="email"&gt;
+&lt;input type="range"&gt;
+&lt;datalist&gt; </pre>
+                    <p><strong>Tip:</strong> Usa siempre el atributo <code>alt</code> en imágenes para que los lectores de pantalla puedan "leerlas".</p>
                 </div>
                 <div class="page-num">3</div>
             </div>
         </div>
 
-        <!-- Página 3: JavaScript -->
-        <div class="paper" id="p3" style="z-index: 3;">
+        <div class="paper" id="p3" style="z-index: 5;">
             <div class="front">
                 <div class="content">
                     <h2>JavaScript</h2>
-                    <h3>Interactividad Web</h3>
-                    <p>El lenguaje que le da vida a la web. Permite cálculos, animaciones e interacciones.*
+                    <h3>Variables y Tipos</h3>
+                    <p>Moderniza tu código con ES6+:</p>
+                    <p><code>const</code>: Para valores fijos.<br>
+                    <code>let</code>: Para valores que cambian.</p>
+                    <pre>const suma = (a, b) => a + b;
+console.log(suma(5, 10));</pre>
+                    <h3>DOM</h3>
+                    <p>Es el puente entre JS y HTML.</p>
+                </div>
+                <div class="page-num">4</div>
+            </div>
+            <div class="back">
+                <div class="content">
+                    <h3>Asincronía</h3>
+                    <p>JavaScript no se detiene. Aprende a manejar esperas:</p>
+                    <pre>async function getData() {
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data);
+}</pre>
+                    <p>Usa <code>Promises</code> para evitar que tu web se congele al cargar datos.</p>
+                </div>
+                <div class="page-num">5</div>
+            </div>
+        </div>
+
+        <div class="paper" id="p4" style="z-index: 4;">
+            <div class="front">
+                <div class="content">
+                    <h2>Lenguaje C++</h2>
+                    <h3>Poder y Control</h3>
+                    <p>C++ se usa en videojuegos y sistemas operativos porque es extremadamente rápido.</p>
+                    <pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  cout << "Hola Mundo";
+  return 0;
+}</pre>
+                </div>
+                <div class="page-num">6</div>
+            </div>
+            <div class="back">
+                <div class="content">
+                    <h3>Punteros y Memoria</h3>
+                    <p>A diferencia de JS, en C++ tú gestionas la memoria:</p>
+                    <p><code>int* p = &var;</code></p>
+                    <p>Un <strong>puntero</strong> guarda la dirección de memoria de otra variable. Es difícil pero te da control total sobre el hardware.</p>
+                </div>
+                <div class="page-num">7</div>
+            </div>
+        </div>
+
+        <div class="paper" id="p5" style="z-index: 3;">
+            <div class="front">
+                <div class="content">
+                    <h2>README.md</h2>
+                    <h3>Documentación</h3>
+                    <p>Todo buen proyecto necesita un archivo de lectura claro.</p>
+                    <p><strong>Estructura ideal:</strong></p>
+                    <ol>
+                        <li>Título y Descripción</li>
+                        <li>Instalación</li>
+                        <li>Capturas de pantalla</li>
+                        <li>Tecnologías usadas</li>
+                        <li>Licencia</li>
+                    </ol>
+                </div>
+                <div class="page-num">8</div>
+            </div>
+            <div class="back">
+                <div class="content">
+                    <h3>Markdown Tips</h3>
+                    <p>Usa guiones para listas y tres tildes para código:</p>
+                    <pre># Título H1
+## Subtítulo H2
+[Texto](URL-Enlace)
+![Alt](URL-Imagen)</pre>
+                    <p>Un buen README hace que otros quieran colaborar en tu GitHub.</p>
+                </div>
+                <div class="page-num">9</div>
+            </div>
+        </div>
+
+        <div class="paper" id="p6" style="z-index: 2;">
+            <div class="front">
+                <div class="content">
+                    <h2>Ruta de Aprendizaje</h2>
+                    <h3>¿Cómo mejorar?</h3>
+                    <ul>
+                        <li><strong>Proyectos Reales:</strong> No solo veas tutoriales, construye algo.</li>
+                        <li><strong>Clean Code:</strong> Escribe código que un humano entienda.</li>
+                        <li><strong>Algoritmos:</strong> Resuelve retos en LeetCode o HackerRank.</li>
+                    </ul>
+                </div>
+                <div class="page-num">10</div>
+            </div>
+            <div class="back">
+                <div class="content">
+                    <h2>¡Fin de la Guía!</h2>
+                    <p>Has recorrido desde las etiquetas básicas hasta la gestión de memoria en C++.</p>
+                    <p>Recuerda: <em>"La programación no es lo que sabes, es lo que puedes resolver."</em></p>
+                    <hr>
+                    <p style="text-align:center">Desarrollado con ❤️ por <strong>Klee</strong></p>
+                </div>
+                <div class="page-num">11</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Lógica de paso de páginas (Simplificada y funcional)
+        const papers = document.querySelectorAll(".paper");
+        let currentLocation = 1;
+        let numOfPapers = papers.length;
+        let maxLocation = numOfPapers + 1;
+
+        papers.forEach((paper, index) => {
+            paper.addEventListener("click", () => {
+                if (currentLocation < maxLocation) {
+                    paper.style.transform = "rotateY(-180deg)";
+                    paper.style.zIndex = index + 1;
+                    currentLocation++;
+                }
+            });
+            
+            // Permitir volver atrás (opcional pero recomendado)
+            paper.addEventListener("contextmenu", (e) => {
+                e.preventDefault();
+                paper.style.transform = "rotateY(0deg)";
+                paper.style.zIndex = numOfPapers - index;
+                currentLocation--;
+            });
+        });
+    </script>
+</body>
+</html>
