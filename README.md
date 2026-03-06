@@ -5,3 +5,7 @@
 
 
 >[Inportante] **El libro esta en constante edision hasta ahora solo tiene html javascript y c++ prometemos meter mas lenguajes y tips o trucos recuerden darle estrella a los proyectos para apoyarme**
+
+| ✨ Rol | 👤 Desarrollador |
+| :--- | :--- |
+| **Lead Dev** | [Klee](https://github.com/kevinreyes-garcia-rgb/) |
