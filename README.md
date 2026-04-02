@@ -10,12 +10,14 @@
 | :--- | :--- |
 | **Lead Dev** | [Klee](https://github.com/kevinreyes-garcia-rgb/) |
 
-## 🛠️ Instalación y Uso
+<details>
+   <summary>Instalacion</summary>
 
-Si quieres probar y leer mi Guia , sigue estos pasos:
+[Link Directo](https://kevinreyes-garcia-rgb.github.io/Guia-de-Programacion-V2/)
 
-1. **Clonar el repositorio:**
-   ```bash
-   https://kevinreyes-garcia-rgb.github.io/Guia-de-Programacion-V2/
-
-[Link](https://kevinreyes-garcia-rgb.github.io/Guia-de-Programacion-V2/)
+Link Copihable
+```
+https://kevinreyes-garcia-rgb.github.io/Guia-de-Programacion-V2/
+```
+   
+</details>
